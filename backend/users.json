@@ -1,0 +1,42 @@
+[
+  {
+    "id": "customer_gy4e22ii",
+    "name": "Test Customer",
+    "phone": "9876543210",
+    "email": "test@user",
+    "password": "$2b$10$lc118D3Z3dtHpTAP2X3szOaTM3TgQg6T0R4J/EY/pn.HvVAl0mRRa",
+    "role": "customer",
+    "streetVIP": false,
+    "createdAt": 1775684945142
+  },
+  {
+    "id": "customer_z9wm4wbr",
+    "name": "John Customer",
+    "phone": "9988776655",
+    "email": "john@user",
+    "password": "$2b$10$bZbQcfsZ5Qn2EItsTEMi5OIclPWhx/4zjXTuwNwyFxZjgE7J8PqJm",
+    "role": "customer",
+    "streetVIP": false,
+    "createdAt": 1775685012857
+  },
+  {
+    "id": "vendor_xe1glvr5",
+    "name": "admin",
+    "phone": "9876543210",
+    "email": "hotel@admin",
+    "password": "$2b$10$6ZxP4nW00uvUJcbbzohO0ewO/6IrqFtr8mfaCrW1UglfhLOf6rKf2",
+    "role": "vendor",
+    "streetVIP": false,
+    "createdAt": 1775685648087
+  },
+  {
+    "id": "delivery_e80nhozc",
+    "name": "rider",
+    "phone": "7894561230",
+    "email": "speedy@rider",
+    "password": "$2b$10$FGzS/8Cz0Xk5x/eCzEyfr.IZxf0juQ76Z51h5mAKvY8AnOFWorYGS",
+    "role": "delivery",
+    "streetVIP": false,
+    "createdAt": 1775685894847
+  }
+]

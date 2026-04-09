@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/75 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.06)];
+  }
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/40 shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+  .glass-dark {
+    @apply bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 shadow-[0_8px_32px_rgba(0,0,0,0.2)];
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500;
+  }
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-orange-500 via-rose-500 to-pink-500 text-white shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-shadow;
+  }
+  .bg-mesh {
+    background-color: #fdf2f8;
+    background-image: 
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.8) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.8) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, hsla(340,100%,76%,0.2) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(22,100%,77%,0.8) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(242,100%,70%,0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(343,100%,76%,0.8) 0px, transparent 50%);
+  }
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.6);
+}
+
+/* Map vendor tooltip */
+.vendor-tooltip {
+  background: white !important;
+  border: 1px solid #fed7aa !important;
+  border-radius: 12px !important;
+  padding: 6px 12px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: #1f2937 !important;
+}
+.vendor-tooltip::before {
+  border-top-color: #fed7aa !important;
+}
+
+/* Dark mode overrides */
+html.dark body {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.4);
+}
+html.dark .vendor-tooltip {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #f3f4f6 !important;
+}
+
+/* Rider tracking pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(99,102,241,0); }
+  100% { box-shadow: 0 0 0 0 rgba(99,102,241,0); }
+}
